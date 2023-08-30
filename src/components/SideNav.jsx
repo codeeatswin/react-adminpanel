@@ -10,7 +10,8 @@ function SideNav({ collapsed }) {
   const theme = useTheme();
   // 스테이트와 현재 선택된 패스경로를 알수있다. menu active와 연결된상태
   const location = useLocation();
-
+  // const env = process.env;
+  // env.PUBLIC_URL = env.PUBLIC_URL || '';
   return (
     <Sidebar
       style={{ height: '100%', top: 'auto' }}
@@ -22,7 +23,8 @@ function SideNav({ collapsed }) {
         <Avatar
           sx={styles.avatar}
           alt='Channel Name'
-          src='/public/avataaars.svg'
+          src={'./avataaars.svg'}
+          
         />
         {!collapsed ? (
           <Typography variant='body2' sx={styles.yourChannel}>
@@ -43,7 +45,6 @@ function SideNav({ collapsed }) {
               color: active ? '#d359ff' : undefined,
             };
           },
-          
         }}
       >
         <MenuItem

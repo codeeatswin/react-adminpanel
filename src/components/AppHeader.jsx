@@ -19,7 +19,7 @@ function AppHeader({collapsed,setCollapsed}) {
         <Box
           component={'img'}
           sx={styles.appLogo}
-          src='/src/assets/react.svg'
+          src='./src/assets/react.svg'
         />
         <Box sx={{flexGrow:1}}/>
         <IconButton title='Notifications' color='secondary'>
