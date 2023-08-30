@@ -25,7 +25,7 @@ function Dashboard() {
           <CardContent>
             <Typography variant='cardTitle'>Latest post</Typography>
             <Box sx={styles.postAuthorSection}>
-              <Avatar sx={styles.avatar} src='./avataaars.svg' />
+              <Avatar sx={styles.avatar} src='avataaars.svg' />
               <Typography sx={styles.postMeta}>React with Masoud</Typography>
               <Typography sx={styles.postMeta}>August 30, 2023</Typography>
             </Box>
@@ -114,7 +114,7 @@ function Dashboard() {
             </Typography>
 
             <Box sx={styles.commentRow}>
-              <Avatar sx={styles.avatar} src='./avataaars.svg' />
+              <Avatar sx={styles.avatar} src='avataaars.svg' />
               <Box>
                 <Box sx={styles.commentDetailsSection}>
                   <Typography sx={styles.postMeta}>
@@ -135,7 +135,7 @@ function Dashboard() {
             </Box>
             <Divider sx={styles.divider} />
             <Box sx={styles.commentRow}>
-              <Avatar sx={styles.avatar} src='./avataaars.svg' />
+              <Avatar sx={styles.avatar} src='avataaars.svg' />
               <Box>
                 <Box sx={styles.commentDetailsSection}>
                   <Typography sx={styles.postMeta}>
@@ -155,7 +155,7 @@ function Dashboard() {
             </Box>
             <Divider sx={styles.divider} />
             <Box sx={styles.commentRow}>
-              <Avatar sx={styles.avatar} src='./avataaars.svg' />
+              <Avatar sx={styles.avatar} src='avataaars.svg' />
               <Box>
                 <Box sx={styles.commentDetailsSection}>
                   <Typography sx={styles.postMeta}>
