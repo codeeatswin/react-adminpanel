@@ -3,13 +3,14 @@ import { AppBar, Badge, Box, IconButton, Toolbar } from '@mui/material';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
-function AppHeader() {
+function AppHeader({collapsed,setCollapsed}) {
+
   return (
     <AppBar position='sticky' sx={styles.appBar}>
       <Toolbar>
         <IconButton
           onClick={() => {
-            console.log('clicked');
+            setCollapsed(!collapsed)
           }}
           color='secondary'
         >

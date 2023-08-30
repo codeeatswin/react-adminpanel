@@ -9,21 +9,35 @@ import { Box, CssBaseline } from '@mui/material';
 import React from 'react';
 import SideNav from './components/SideNav';
 import AppHeader from './components/AppHeader';
+import { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './router/AppRoutes';
 
 function App() {
+  const [collapsed, setCollapsed] = useState(false)
   return (
     <React.Fragment>
+      {/* 테마 */}
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <AppHeader />
+        <AppHeader collapsed={collapsed} setCollapsed={setCollapsed} />
         <Box sx={styles.container}>
-          <SideNav />
-          <Box component={'main'} sx={styles.mainSection}></Box>
+        {/* 라우터 */}
+          <BrowserRouter>
+          <SideNav collapsed={collapsed} />
+          <Box component={'main'} sx={styles.mainSection}>
+          <AppRoutes/>
+          </Box>
+          
+          </BrowserRouter>
+        
         </Box>
       </ThemeProvider>
     </React.Fragment>
   );
 }
+
+// 메터리얼ui css 
 /** @type {import("@mui/material").SxProps} */
 
 const styles = {
@@ -33,7 +47,7 @@ const styles = {
     height: 'calc(100% - 64px)',
   },
   mainSection: {
-    p: 1,
+    p: 4,
     width: '100%',
     height: '100%',
     overflow: 'auto',
